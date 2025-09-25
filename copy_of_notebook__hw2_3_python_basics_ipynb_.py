@@ -369,13 +369,108 @@ Comment the cells below out before you submit.
 """
 
 # you can also get a smaller glimpse with
-# display (df.head())
+display (df.head())
+
+#Unnamed: 0.1	Unnamed: 0	HITId	WorkerId	Answer	SubmitTime	AutoApprovalTime	ApprovalTime	AcceptTime	AssignmentStatus	...	MaxAssignments	Reward	AutoApprovalDelayInSeconds	Expiration	AssignmentDurationInSeconds	QualificationRequirements	HITReviewStatus	NumberOfAssignmentsPending	NumberOfAssignmentsAvailable	NumberOfAssignmentsCompleted
+#0	0	0	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU	AVBRJBJONL47I	<?xml version="1.0" encoding="ASCII"?><Questio...	2020-02-06 23:25:41	2020-02-09 23:25:41-05:00	2020-02-09 23:25:46-05:00	2020-02-06 23:22:13	Approved	...	7	0.65	259200	2020-02-17 16:01:12-05:00	5400	[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30...	NotReviewed	0	3	0
+#1	1	1	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU	A1CY7IOJ9YH136	<?xml version="1.0" encoding="ASCII"?><Questio...	2020-02-06 01:34:37	2020-02-09 01:34:37-05:00	2020-02-09 01:34:46-05:00	2020-02-06 01:27:28	Approved	...	7	0.65	259200	2020-02-17 16:01:12-05:00	5400	[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30...	NotReviewed	0	3	0
+#2	2	2	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU	A2C84POENS2UNY	<?xml version="1.0" encoding="ASCII"?><Questio...	2020-02-04 10:59:35	2020-02-07 10:59:35-05:00	2020-02-07 11:00:23-05:00	2020-02-04 10:25:54	Approved	...	7	0.65	259200	2020-02-17 16:01:12-05:00	5400	[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30...	NotReviewed	0	3	0
+#3	3	3	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU	A98E8M4QLI9RS	<?xml version="1.0" encoding="ASCII"?><Questio...	2020-02-04 07:07:59	2020-02-07 07:07:59-05:00	2020-02-07 07:08:23-05:00	2020-02-04 07:03:48	Approved	...	7	0.65	259200	2020-02-17 16:01:12-05:00	5400	[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30...	NotReviewed	0	3	0
+#4	4	4	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU	AY7WPVKHVNBLG	<?xml version="1.0" encoding="ASCII"?><Questio...	2020-02-03 18:20:08	2020-02-06 18:20:08-05:00	2020-02-06 18:20:23-05:00	2020-02-03 18:13:47	Approved	...	7	0.65	259200	2020-02-17 16:01:12-05:00	5400	[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30...	NotReviewed	0	3	0
+#5 rows × 92 columns
 
 # or just the columns with
-# display (df.columns)
+display (df.columns)
+
+#Index(['Unnamed: 0.1', 'Unnamed: 0', 'HITId', 'WorkerId', 'Answer',
+      #  'SubmitTime', 'AutoApprovalTime', 'ApprovalTime', 'AcceptTime',
+      #  'AssignmentStatus', 'AssignmentId', '1.BREAKDOWN', '1.NOT BREAKDOWN',
+      #  '1.POSSIBLE BREAKDOWN', '2.BREAKDOWN', '2.NOT BREAKDOWN',
+      #  '2.POSSIBLE BREAKDOWN', '3.BREAKDOWN', '3.NOT BREAKDOWN',
+      #  '3.POSSIBLE BREAKDOWN', '4.BREAKDOWN', '4.NOT BREAKDOWN',
+      #  '4.POSSIBLE BREAKDOWN', '5.BREAKDOWN', '5.NOT BREAKDOWN',
+      #  '5.POSSIBLE BREAKDOWN', '6.BREAKDOWN', '6.NOT BREAKDOWN',
+      #  '6.POSSIBLE BREAKDOWN', '7.BREAKDOWN', '7.NOT BREAKDOWN',
+      #  '7.POSSIBLE BREAKDOWN', '8.BREAKDOWN', '8.NOT BREAKDOWN',
+      #  '8.POSSIBLE BREAKDOWN', '9.BREAKDOWN', '9.NOT BREAKDOWN',
+      #  '9.POSSIBLE BREAKDOWN', '10.BREAKDOWN', '10.NOT BREAKDOWN',
+      #  '10.POSSIBLE BREAKDOWN', '11.BREAKDOWN', '11.NOT BREAKDOWN',
+      #  '11.POSSIBLE BREAKDOWN', '12.BREAKDOWN', '12.NOT BREAKDOWN',
+      #  '12.POSSIBLE BREAKDOWN', '13.BREAKDOWN', '13.NOT BREAKDOWN',
+      #  '13.POSSIBLE BREAKDOWN', '14.BREAKDOWN', '14.NOT BREAKDOWN',
+      #  '14.POSSIBLE BREAKDOWN', '15.BREAKDOWN', '15.NOT BREAKDOWN',
+      #  '15.POSSIBLE BREAKDOWN', '16.BREAKDOWN', '16.NOT BREAKDOWN',
+      #  '16.POSSIBLE BREAKDOWN', '17.BREAKDOWN', '17.NOT BREAKDOWN',
+      #  '17.POSSIBLE BREAKDOWN', '18.BREAKDOWN', '18.NOT BREAKDOWN',
+      #  '18.POSSIBLE BREAKDOWN', '19.BREAKDOWN', '19.NOT BREAKDOWN',
+      #  '19.POSSIBLE BREAKDOWN', '20.BREAKDOWN', '20.NOT BREAKDOWN',
+      #  '20.POSSIBLE BREAKDOWN', '21.BREAKDOWN', '21.NOT BREAKDOWN',
+      #  '21.POSSIBLE BREAKDOWN', 'HITTypeId', 'HITGroupId', 'CreationTime',
+      #  'Title', 'Description', 'Question', 'Keywords', 'HITStatus',
+      #  'MaxAssignments', 'Reward', 'AutoApprovalDelayInSeconds', 'Expiration',
+      #  'AssignmentDurationInSeconds', 'QualificationRequirements',
+      #  'HITReviewStatus', 'NumberOfAssignmentsPending',
+      #  'NumberOfAssignmentsAvailable', 'NumberOfAssignmentsCompleted'],
+      # dtype='object')
 
 # a slice of a dataframe is called a series. for example:
-# display (df['HITId'])
+display (df['HITId'])
+
+# 	HITId
+# 0	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU
+# 1	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU
+# 2	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU
+# 3	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU
+# 4	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU
+# 5	3L55D8AUFAVVNBWWC4GRK7QKRM6CYU
+# 6	3WRBLBQ2GR6B7SGG6I11I6HFD1J0GR
+# 7	3WRBLBQ2GR6B7SGG6I11I6HFD1J0GR
+# 8	3WRBLBQ2GR6B7SGG6I11I6HFD1J0GR
+# 9	3WRBLBQ2GR6B7SGG6I11I6HFD1J0GR
+# 10	3WRBLBQ2GR6B7SGG6I11I6HFD1J0GR
+# 11	3MIVREZQVHW4X7HYD7GVV40QXMXQKH
+# 12	3MIVREZQVHW4X7HYD7GVV40QXMXQKH
+# 13	3MIVREZQVHW4X7HYD7GVV40QXMXQKH
+# 14	3MIVREZQVHW4X7HYD7GVV40QXMXQKH
+# 15	3MIVREZQVHW4X7HYD7GVV40QXMXQKH
+# 16	3B286OTISEFHZ74Z6QJX4PL8EFCAJW
+# 17	3B286OTISEFHZ74Z6QJX4PL8EFCAJW
+# 18	3B286OTISEFHZ74Z6QJX4PL8EFCAJW
+# 19	3B286OTISEFHZ74Z6QJX4PL8EFCAJW
+# 20	39N6W9XWRDL84NC1EQCAAYBZPEXYGP
+# 21	39N6W9XWRDL84NC1EQCAAYBZPEXYGP
+# 22	39N6W9XWRDL84NC1EQCAAYBZPEXYGP
+# 23	39N6W9XWRDL84NC1EQCAAYBZPEXYGP
+# 24	39N6W9XWRDL84NC1EQCAAYBZPEXYGP
+# 25	39N6W9XWRDL84NC1EQCAAYBZPEXYGP
+# 26	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 27	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 28	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 29	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 30	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 31	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 32	3TL87MO8CMNIQO97KRH2Y59RFKUFLG
+# 33	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 34	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 35	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 36	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 37	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 38	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 39	3DW3BNF1GHGC7EBEQHD2BMQ7JEJ8VB
+# 40	3BO3NEOQM0FL4WKTO8YXSO6810NAIK
+# 41	3BO3NEOQM0FL4WKTO8YXSO6810NAIK
+# 42	3BO3NEOQM0FL4WKTO8YXSO6810NAIK
+# 43	3BO3NEOQM0FL4WKTO8YXSO6810NAIK
+# 44	3BO3NEOQM0FL4WKTO8YXSO6810NAIK
+# 45	3BO3NEOQM0FL4WKTO8YXSO6810NAIK
+# 46	3EPG8DX9LKOGFCVG67X0TARYV0H5PL
+# 47	3EPG8DX9LKOGFCVG67X0TARYV0H5PL
+# 48	3EPG8DX9LKOGFCVG67X0TARYV0H5PL
+# 49	3EPG8DX9LKOGFCVG67X0TARYV0H5PL
+# 50	3EPG8DX9LKOGFCVG67X0TARYV0H5PL
+# 51	3EPG8DX9LKOGFCVG67X0TARYV0H5PL
+
+# dtype: object
 
 """2. **[3 points]** Write the method `get_workerId_by_row` that returns the Worker ID at the given row in the dataframe."""
 
@@ -410,9 +505,9 @@ def convert_times(df, column):
   return df[column]
 
 # comment these out before you submit
-df['SubmitTime'] = convert_times(df, 'SubmitTime')
-df['AcceptTime'] = convert_times(df, 'AcceptTime')
-df.head()
+#df['SubmitTime'] = convert_times(df, 'SubmitTime')
+#df['AcceptTime'] = convert_times(df, 'AcceptTime')
+#df.head()
 
 """5. **[5 points]** In `get_work_time` figure out how long each worker spent on the batch. Return the series that is the total work time indexed by the worker id."""
 
@@ -444,13 +539,13 @@ Hint: try to think about a worker's accept and submit times would look like if t
 Comment all of this out before you submit.
 """
 
-# plot_df = pd.DataFrame()
+#plot_df = pd.DataFrame()
 
-# plot_df['WorkTime'] = get_work_time(df)
+#plot_df['WorkTime'] = get_work_time(df)
 
-# plot_df['CWorkTime'] = calculated_work_time(df)
+#plot_df['CWorkTime'] = calculated_work_time(df)
 
-# plot_df.plot(kind='bar')
+#plot_df.plot(kind='bar')
 
 """### 5.2 A Simple Program to Read from the Web [14 points]
 
@@ -460,7 +555,7 @@ Run the cells below.
 """
 
 # CAUTION: comment this out before you submit!
-# !pip install money-parser
+#!pip install money-parser
 
 import pandas as pd
 from money_parser import price_dec
